@@ -1,16 +1,29 @@
 ﻿@inherits LayoutComponentBase
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+    <header>
+        <NavLink class="logo-link"  href="" Match="NavLinkMatch.All">
+                     <img class="logo" asp-append-version="true" src="images/placeholder logo.svg" alt="">
+                </NavLink>
+        
+    </header>
+
+    <div class="aside-main-div">
+        <div>
+            <NavMenu />
         </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
+        <main>
+            <article class="content px-4">
+                @Body
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <div>
+            <p>Av Calle Alexanderson - Kontakta mig via e-post: <a
+                    href="mailto:caal2301@student.miun.se">caal2301@@student.miun.se</a></p>
+        </div>
+    </footer>
 </div>
