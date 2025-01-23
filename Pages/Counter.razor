@@ -3,16 +3,38 @@
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
+<p>Konvertera Internationella måttenhetssystemets enheter till imperiala enheter</p>
 
-<p role="status">Current count: @currentCount</p>
+<label>
+    Meter:
+<input type="text" @bind="@meter" @onblur="ConvertToFeet">
+</label>
+<p class="converted-p">Feet: @String.Format("{0:F2}", feet)</p>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<label>
+    Kilometer per timme:
+<input type="text" @bind="@kmph" @onblur="ConvertToMph" >
+</label>
+<p  class="converted-p">Miles per hour: @String.Format("{0:F0}", mph)</p>
+
 
 @code {
-    private int currentCount = 0;
+    private double feet { get; set; } = 0;
+    private string? meter { get; set; } = "0";
+    private double mph { get; set; } = 0;
+    private string? kmph { get; set; } = "0";
 
-    private void IncrementCount()
+    private void ConvertToFeet()
     {
-        currentCount++;
+        float meterFloat;
+        float.TryParse(meter, out meterFloat);
+        feet = meterFloat * 3.28084; 
+    }
+
+    private void ConvertToMph()
+    {
+        float kmphFloat;
+        float.TryParse(kmph, out kmphFloat);
+        mph = kmphFloat * 0.6213712;
     }
 }
