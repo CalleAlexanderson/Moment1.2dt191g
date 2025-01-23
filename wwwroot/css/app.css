@@ -7,6 +7,11 @@ body {
     background-color: #abd9da;
 }
 
+h1,
+p {
+    margin: 0 20px;
+}
+
 h1:focus {
     outline: none;
 }

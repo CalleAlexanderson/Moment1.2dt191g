@@ -5,7 +5,7 @@ ul {
 }
 
 button {
-  position: absolute;
+  position: fixed;
   top: 140px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -43,14 +43,12 @@ aside.shown {
 }
 
 @media only screen and (min-width: 600px) {
+  ul {
+    border: none;
+  }
 
   button {
     visibility: hidden;
-  }
-
-  .aside-main-div {
-    display: grid;
-    grid-template-columns: 250px auto;
   }
 
   main {
