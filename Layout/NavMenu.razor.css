@@ -1,5 +1,7 @@
 ul {
-    padding: 0;
+  padding: 0;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 button {
@@ -7,63 +9,73 @@ button {
   top: 140px;
   left: 50%;
   transform: translate(-50%, 0);
+  width: 80px;
+  font-size: 1.3rem;
 }
 
 aside {
-    background-color: white;
-    transition: 0.5s;
-  }
-  
-  aside li:first-child {
-    border-top: 1px solid black;
-  }
-  
-  aside li {
-    list-style: none;
-    border-bottom: 1px solid black;
-    padding: 5px;
-    font-size: 1.2rem;
-  }
-  
-  aside li:hover {
-    background-color: #aacaca;
-    transition: 0.25s;
+  background-color: white;
+  transition: 0.5s;
+}
+
+aside li:first-child {
+  border-top: 1px solid black;
+}
+
+aside li {
+  list-style: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+aside li:hover {
+  background-color: #aacaca;
+  transition: 0.25s;
+}
+
+aside.hidden {
+  margin-top: 80px;
+}
+
+aside.shown {
+  margin-top: 200px;
+}
+
+@media only screen and (min-width: 600px) {
+
+  button {
+    visibility: hidden;
   }
 
+  .aside-main-div {
+    display: grid;
+    grid-template-columns: 250px auto;
+  }
+
+  main {
+    margin-top: 150px;
+  }
+
+  /* Gör så margin-top blir rätt */
   aside.hidden {
-    margin-top: 80px;
+    margin-top: 165px;
   }
 
   aside.shown {
-    margin-top: 200px;
+    margin-top: 165px;
   }
 
-  @media only screen and (min-width: 600px) {
-
-    button{
-        visibility: hidden;
-    }
-  
-    .aside-main-div {
-      display: grid;
-      grid-template-columns: 250px auto;
-    }
-  
-    aside,
-    main {
-      margin-top: 150px;
-    }
-  
-    aside {
-      height: calc(100vh - 250px);
-      margin: 165px 2vw 0;
-      border: 1px solid black;
-    }
-  
-    aside li {
-      width: 90%;
-      border: 1px solid black;
-      margin: 20px auto;
-    }
-  
+  aside {
+    height: calc(100vh - 250px);
+    margin: 165px 2vw 0;
+    border: 1px solid black;
   }
+
+  aside li {
+    width: 90%;
+    border: 1px solid black;
+    margin: 20px auto;
+  }
+
+}
