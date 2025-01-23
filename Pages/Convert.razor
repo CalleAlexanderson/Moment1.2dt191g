@@ -1,21 +1,26 @@
-﻿@page "/counter"
+﻿@page "/convert"
 
-<PageTitle>Counter</PageTitle>
+<PageTitle>Konvertering</PageTitle>
 
-<h1>Counter</h1>
+<h1>Konvertering </h1>
 <p>Konvertera Internationella måttenhetssystemets enheter till imperiala enheter</p>
 
-<label>
-    Meter:
-<input type="text" @bind="@meter" @onblur="ConvertToFeet">
-</label>
-<p class="converted-p">Feet: @String.Format("{0:F2}", feet)</p>
+<div>
+    <label>
+        Meter:
+        <input type="text" @bind="@meter" @onblur="ConvertToFeet">
+    </label>
+    <p class="converted-p">Feet: @String.Format("{0:F2}", feet)</p>
+</div>
 
-<label>
-    Kilometer per timme:
-<input type="text" @bind="@kmph" @onblur="ConvertToMph" >
-</label>
-<p  class="converted-p">Miles per hour: @String.Format("{0:F0}", mph)</p>
+<div>
+
+    <label>
+        Kilometer per timme:
+        <input type="text" @bind="@kmph" @onblur="ConvertToMph">
+    </label>
+    <p class="converted-p">Miles per hour: @String.Format("{0:F0}", mph)</p>
+</div>
 
 
 @code {
@@ -28,7 +33,7 @@
     {
         float meterFloat;
         float.TryParse(meter, out meterFloat);
-        feet = meterFloat * 3.28084; 
+        feet = meterFloat * 3.28084;
     }
 
     private void ConvertToMph()
