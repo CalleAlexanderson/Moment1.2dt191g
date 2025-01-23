@@ -1,0 +1,57 @@
+﻿@page "/books"
+@inject HttpClient Http
+
+<PageTitle>Böcker</PageTitle>
+
+<h1>Böcker</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (books == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titel</th>
+                <th>Score</th>
+                <th>Färdigläst</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Book in books)
+            {
+                <tr>
+                    <td>@Book.Title</td>
+                    <td>@Book.Rating</td>
+                    @if(@Book.Finished) {
+                        <td>Ja</td>
+                    } else {
+                        <td>Nej</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private Book[]? books;
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = await Http.GetFromJsonAsync<Book[]>("sample-data/books.json");
+    }
+
+    public class Book
+    {
+        public string? Title { get; set; }
+
+        public int Rating { get; set; }
+
+        public bool Finished { get; set; }
+    }
+}
