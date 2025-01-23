@@ -5,32 +5,36 @@
 
 <h1>Böcker</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>Mitt största fritids- intresse/aktivitet är att läsa, jag gillar speciellt fantasy böcker och min favorit författare
+    är Sarah J Maas. Här ligger alla hennes verk där jag gett de ett score på vad jag tycker om de </p>
 
 @if (books == null)
 {
-    <p><em>Loading...</em></p>
+    <p><em>Laddar...</em></p>
 }
 else
 {
     <table class="table">
         <thead>
             <tr>
-                <th>Titel</th>
-                <th>Score</th>
-                <th>Färdigläst</th>
+                <th class="text-left">Titel</th>
+                <th class="text-center">Score</th>
+                <th class="text-center">Färdigläst</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var Book in books)
             {
                 <tr>
-                    <td>@Book.Title</td>
-                    <td>@Book.Rating</td>
-                    @if(@Book.Finished) {
-                        <td>Ja</td>
-                    } else {
-                        <td>Nej</td>
+                    <td class="text-left">@Book.Title</td>
+                    <td class="text-center">@Book.Rating</td>
+                    @if (@Book.Finished)
+                    {
+                        <td class="text-center">Ja</td>
+                    }
+                    else
+                    {
+                        <td class="text-center">Nej</td>
                     }
                 </tr>
             }

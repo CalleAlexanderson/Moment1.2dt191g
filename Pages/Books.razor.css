@@ -1,0 +1,32 @@
+p {
+    max-width: 750px;
+}
+
+table{
+    width: 90%;
+    max-width: 750px;
+    margin: 10px auto;
+    border-collapse: collapse; 
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+td {
+    padding: 4px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+@media only screen and (min-width: 600px) {
+    table{
+        margin: 10px 20px;
+    } 
+}
