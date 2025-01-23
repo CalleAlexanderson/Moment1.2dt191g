@@ -1,27 +1,83 @@
 ﻿[
   {
-    "date": "2022-01-06",
-    "temperatureC": 1,
-    "summary": "Freezing"
+    "title": "A Court of Thorns and Roses",
+    "rating": 9,
+    "finished": true
   },
   {
-    "date": "2022-01-07",
-    "temperatureC": 14,
-    "summary": "Bracing"
+    "title": "A Court of Mist and Fury",
+    "rating": 10,
+    "finished": true
   },
   {
-    "date": "2022-01-08",
-    "temperatureC": -13,
-    "summary": "Freezing"
+    "title": "A Court of Wings and Ruin",
+    "rating": 10,
+    "finished": true
   },
   {
-    "date": "2022-01-09",
-    "temperatureC": -16,
-    "summary": "Balmy"
+    "title": "A Court of Frost and Starligt",
+    "rating": 7,
+    "finished": true
   },
   {
-    "date": "2022-01-10",
-    "temperatureC": -2,
-    "summary": "Chilly"
+    "title": "A Court of Silver Flames",
+    "rating": 10,
+    "finished": true
+  },
+  {
+    "title": "The Assassin's Blade",
+    "rating": 8,
+    "finished": true
+  },
+  {
+    "title": "Throne of Glass",
+    "rating": 9,
+    "finished": true
+  },
+  {
+    "title": "Crown of Midnight",
+    "rating": 9,
+    "finished": true
+  },
+  {
+    "title": "Heir of Fire",
+    "rating": 10,
+    "finished": true
+  },
+  {
+    "title": "Queen of Shadows",
+    "rating": 9,
+    "finished": true
+  },
+  {
+    "title": "Empire of Storms",
+    "rating": 9,
+    "finished": true
+  },
+  {
+    "title": "Tower of Dawn",
+    "rating": 8,
+    "finished": true
+  },
+  {
+    "title": "Kingdom of Ash",
+    "rating": 9,
+    "finished": true
+  },
+  {
+    "title": "House of Earth and Blood",
+    "rating": 9,
+    "finished": true
+  },
+  {
+    "title": "House of Sky and Breath",
+    "rating": 9,
+    "finished": true
+  },
+  {
+    "title": "House of Flame and Shadow",
+    "rating": 0,
+    "finished": false
   }
+
 ]
